@@ -211,7 +211,7 @@ export default {
       doc.text(values.Mailorga8, 200, 50, null, null, "right");
       doc.text(values.Postalorga8, 200, 55, null, null, "right");
       doc.text(values.Villeorga8, 200, 60, null, null, "right");
-       doc.setFont('Times-Roman', 'bold')
+      doc.setFont('Times-Roman', 'bold')
       doc.text('Objet: Rectification de données me concernant\n', 10, 70)
       doc.setFont('Times-Roman', 'normal')
       doc.text('Madame, Monsieur,\n', 10, 90)
@@ -221,11 +221,10 @@ export default {
       doc.text('données (RGPD), je vous remercie de bien vouloir compléter votre fichier avec les données\n', 10, 140)
       doc.text('ci-dessous utiles à votre traitement : \n', 10, 145)
       Forms.setLines(doc, values.Rectifiees8, 150);
-      doc.text('Je vous remercie de me faire parvenir votre réponse dans les meilleurs délais et au plus\n', 10, 180)
+      doc.text('Vous voudrez bien me faire parvenir votre réponse dans les meilleurs délais et au plus\n', 10, 180)
       doc.text('tard dans un délai d\'un mois à compter de la réception de ma demande (article 12.3 du RGPD).\n', 10, 185)
       doc.text('Je vous remercie également de notifier cette demande de rectification aux organismes que vous\n', 10, 195)
-      doc.text(' auriez rendus destinataires de mes données (article 19 du RGPD).\n', 10, 200)
-      doc.text('l\'informatique et des libertés (CNIL) d\'une réclamation.\n', 10, 210)
+      doc.text('auriez rendus destinataires de mes données (article 19 du RGPD).\n', 10, 200)
       doc.text('Je vous prie d\'agréer, Madame, Monsieur, l\'expression de mes salutations distinguées.', 10, 215)
       doc.text(NP, 10, 230)
       doc.addImage("/img/ProtectID_logo.242c85be.png", "PNG", 145, 280, 60, 15);

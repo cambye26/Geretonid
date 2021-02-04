@@ -39,21 +39,38 @@
   height: 175px;
   line-height: 1;
   padding: .5rem;
-  margin: 1rem auto;
+  margin: .5rem;
+  color: #ffffff;
   -webkit-justify-content: center;
   display: -webkit-inline-box;
   -webkit-box-pack: center;
   -webkit-box-align: center;
+  background-color: #184abb; 
+  display: -webkit-inline-box;
+}
+
+.droit-container .btn-form:hover {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .droit-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 1200px;
   margin: auto;
+}
+
+@media screen and (max-width: 950px) {
+  .droit-container {
+    align-items: center;
+    justify-content: center;
+  }
+
 }
 
 .btn-xl {

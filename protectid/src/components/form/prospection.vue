@@ -44,14 +44,14 @@ export default {
                 <input type="text" class="form-control" placeholder="Sa ville" id="Villeorga1" v-model="addressCity">
               </div>
             <form>
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Vos informations</h5>
-          </div>
-           <div class="form-group">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Vos informations</h5>
+              </div>
+              <div class="form-group">
                 <label for="message-text" class="col-form-label">Identifiant client ou numéro de compte</label>
                 <input class="form-control" id="Identifiant" placeholder="Exemple: ">
               </div>
-             <div class="form-group">
+              <div class="form-group">
                 <label for="recipient-name" class="col-form-label">Nom</label>
                 <input type="text" class="form-control" placeholder="Votre nom" id="Nom1">
               </div>

@@ -148,7 +148,7 @@ export default {
     //
     updateListOrganismes(match) {
       console.log("updateListOrganismes start");
-      const baseURI = 'https://api.geretonid.com/api/company/search';
+      const baseURI = 'http://localhost:8080/api/company/search';
       const param = { name: match };
       const headers = {
         "Authorization":  "token 32ffef7a5e2682244a84fa2a68630da15bc6575b",
@@ -172,7 +172,7 @@ export default {
     // 
     updateOrganismeDetails(id) {
       console.log("updateOrganismeDetails start");
-      const baseURI = "https://api.geretonid.com/api/company/get/" + id;
+      const baseURI = "http://localhost:8080/api/company/get/" + id;
       const headers = {
         headers : {
           "Authorization":  "token 32ffef7a5e2682244a84fa2a68630da15bc6575b",

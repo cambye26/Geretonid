@@ -12,64 +12,97 @@
 
           <div class="droit-container">
             <a
-              class='btn btn-primary btn-form text-uppercase js-scroll-trigger' style='background-color: #184abb; display: -webkit-inline-box'
+              class='btn btn-primary btn-form text-uppercase js-scroll-trigger' 
               data-toggle='modal'
-              data-target='#accès'
+              data-target='#modal'
+              data-form="acces"
+              data-pdf="acces"
+              @click="addFields"
             >Droit d'accès</a>
             <a
-              class='btn btn-primary btn-form text-uppercase js-scroll-trigger' style='background-color: #184abb; display: -webkit-inline-box'
+              class='btn btn-primary btn-form text-uppercase js-scroll-trigger' 
               data-toggle='modal'
-              data-target='#supprimer'
+              data-target='#modal'
+              data-form="supprime"
+              data-pdf="supprime"
+              @click="addFields"
             >Supprimer ses données personnelles</a>
             <a
-              class='btn btn-primary btn-form text-uppercase js-scroll-trigger' style='background-color: #184abb; display: -webkit-inline-box'
+              class='btn btn-primary btn-form text-uppercase js-scroll-trigger' 
               data-toggle='modal'
-              data-target='#pub'
+              data-target='#modal'
+              data-form="pub"
+              data-pdf="pub"
+              @click="addFields"
             >Ne plus recevoir de publicités</a>
             <a
-              class='btn btn-primary btn-form text-uppercase js-scroll-trigger' style='background-color: #184abb; display: -webkit-inline-box'
+              class='btn btn-primary btn-form text-uppercase js-scroll-trigger' 
               data-toggle='modal'
-              data-target='#trait'
+              data-target='#modal'
+              data-form="traitement"
+              data-pdf="traitement"
+              @click="addFields"
             >S'opposer au traitement de données</a>
             <a
-              class='btn btn-primary btn-form text-uppercase js-scroll-trigger' style='background-color: #184abb; display: -webkit-inline-box'
+              class='btn btn-primary btn-form text-uppercase js-scroll-trigger' 
               data-toggle='modal'
-              data-target='#prospec'
+              data-target='#modal'
+              data-form="prospection"
+              data-pdf="prospection"
+              @click="addFields"
             >Stopper la prospection commerciale</a>
             <a
-              class='btn btn-primary btn-form text-uppercase js-scroll-trigger' style='background-color: #184abb; display: -webkit-inline-box'
+              class='btn btn-primary btn-form text-uppercase js-scroll-trigger' 
               data-toggle='modal'
-              data-target='#site'
+              data-target='#modal'
+              data-form="site"
+              data-pdf="site"
+              @click="addFields"
             >Supprimer des informations vous concernant d'un site internet</a>
             <a
-              class='btn btn-primary btn-form text-uppercase js-scroll-trigger' style='background-color: #184abb; display: -webkit-inline-box'
+              class='btn btn-primary btn-form text-uppercase js-scroll-trigger' 
               data-toggle='modal'
-              data-target='#video'
+              data-target='#modal'
+              data-form="video"
+              data-pdf="video"
+              @click="addFields"
             >Accéder à des images vidéo vous concernant</a>
             <a
-              class='btn btn-primary btn-form text-uppercase js-scroll-trigger' style='background-color: #184abb; display: -webkit-inline-box'
+              class='btn btn-primary btn-form text-uppercase js-scroll-trigger' 
               data-toggle='modal'
-              data-target='#compte'
+              data-target='#modal'
+              data-form="compte"
+              data-pdf="compte"
+              @click="addFields"
             >Clôturer un compte en ligne</a>
             <a
               class='btn btn-primary btn-form text-uppercase js-scroll-trigger' style='background-color: #184abb; display: -webkit-inline-box'
               data-toggle='modal'
-              data-target='#incompletes'
+              data-target='#modal'
+              data-form="rectifier"
+              data-pdf="incompletes"
+              @click="addFields"
             >Rectifier des données incomplètes</a>
             <a
-              class='btn btn-primary btn-form text-uppercase js-scroll-trigger' style='background-color: #184abb; display: -webkit-inline-box'
+              class='btn btn-primary btn-form text-uppercase js-scroll-trigger'
               data-toggle='modal'
-              data-target='#inexactes'
+              data-target='#modal'
+              data-form="rectifier"
+              data-pdf="inexactes"
+              @click="addFields"
             >Rectifier des données inexactes</a>
             <a
-              class='btn btn-primary btn-form text-uppercase js-scroll-trigger' style='background-color: #184abb; display: -webkit-inline-box'
+              class='btn btn-primary btn-form text-uppercase js-scroll-trigger'
               data-toggle='modal'
               data-target='#medical'
             >Accéder à son dossier médical</a>
             <a
-              class='btn btn-primary btn-form text-uppercase js-scroll-trigger' style='background-color: #184abb; display: -webkit-inline-box'
+              class='btn btn-form text-uppercase js-scroll-trigger'
               data-toggle='modal'
-              data-target='#financier'
+              data-target='#modal'
+              data-form="financier"
+              data-pdf="financier"
+              @click="addFields"
             >Connaître les informations détenues par un établissement financier</a>
           </div>
           
@@ -176,7 +209,7 @@
       </div>
     </section> -->
     <!--- POP-UP -->
-    <Acces></Acces>
+    <!-- <Acces></Acces>
     <Supprimer></Supprimer>
     <Pub></Pub>
     <Traitement></Traitement>
@@ -185,43 +218,54 @@
     <Video></Video>
     <Compte></Compte>
     <Incompletes></Incompletes>
-    <Inexactes></Inexactes>
+    <Inexactes></Inexactes>  
+    <Financier></Financier> -->
     <Medical></Medical>
-    <Financier></Financier>
+    <Modal></Modal>
   </div>
 </template>
 
 <script>
-import Supprimer from './form/supprime.vue';
-import Acces from './form/acces.vue';
-import Pub from './form/pub.vue';
-import Traitement from './form/traitement.vue';
-import Prospection from './form/prospection.vue';
-import Site from './form/site.vue';
-import Video from './form/video.vue';
-import Compte from './form/compte.vue';
-import Incompletes from './form/incompletes.vue';
-import Inexactes from './form/inexactes.vue';
+// import Supprimer from './form/supprime.vue';
+// import Acces from './form/acces.vue';
+// import Pub from './form/pub.vue';
+// import Traitement from './form/traitement.vue';
+// import Prospection from './form/prospection.vue';
+// import Site from './form/site.vue';
+// import Video from './form/video.vue';
+// import Compte from './form/compte.vue';
+// import Incompletes from './form/incompletes.vue';
+// import Inexactes from './form/inexactes.vue';
+// import Financier from './form/financier.vue';
+import Modal from './form/Modal.vue';
 import Medical from './form/medical.vue';
-import Financier from './form/financier.vue';
+import Forms from '@/services/Forms';
 import Vue from 'vue';
 import DisableAutocomplete from 'vue-disable-autocomplete';
 Vue.use(DisableAutocomplete);
 
 export default {
   components: {
-    Supprimer,
-    Acces,
-    Pub,
-    Traitement,
-    Prospection,
-    Site,
-    Video,
-    Compte,
-    Incompletes,
-    Inexactes,
-    Financier,
+    // Supprimer,
+    // Acces,
+    // Pub,
+    // Traitement,
+    // Prospection,
+    // Site,
+    // Video,
+    // Compte,
+    // Incompletes,
+    // Inexactes,
+    // Financier,
     Medical,
+    Modal,
+  }, 
+  methods: {
+    addFields($this) {
+      Forms.changeModalTitle($this.srcElement);
+      Forms.addModalFields($this.srcElement);
+      Forms.changePdfButton($this.srcElement);
+    }
   }
 }
 
